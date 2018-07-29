@@ -1,5 +1,8 @@
 # stri: string interpolation library for D
 
+[![Dub version](https://img.shields.io/dub/v/stri.svg)](https://code.dlang.org/packages/stri)
+
+
 D language library emulates [Scala's string interpolation](https://docs.scala-lang.org/overviews/core/string-interpolation.html).
 
 ## how to use
