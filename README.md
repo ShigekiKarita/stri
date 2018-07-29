@@ -8,16 +8,16 @@ D language library emulates [Scala's string interpolation](https://docs.scala-la
 ## how to use
 
 ```d
-import std.stdio;
 import stri : s;
 
+# runtime/compile-time variables
 auto a = 1;
 enum _a0 = "D-lang";
-mixin s!"${a} is one. ${_a0} is nice. ${a}" i;
-assert(i.str == "1 is one. D-lang is nice. 1");
-writeln(i.str);
+struct A {
+    static a = 0.123;
+}
+
+# you can use the default %s and custom format e.g., %03d
+mixin s!"${a} is one. ${_a0} is nice. ${a%03d}, ${A.a%.3f}" i;
+assert(i.str == "1 is one. D-lang is nice. 001");
 ```
-
-## todo
-
-- custom formatter like `%f2.2` instead of default `%s`
