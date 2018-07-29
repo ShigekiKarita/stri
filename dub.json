@@ -1,0 +1,9 @@
+{
+	"name": "stri",
+	"authors": [
+		"karita"
+	],
+	"description": "string interpolation library",
+	"copyright": "Copyright © 2018, karita",
+	"license": "BSL-1.0"
+}
